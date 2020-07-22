@@ -28,36 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelRecipes = new System.Windows.Forms.Label();
-            this.listRecipes = new System.Windows.Forms.ListBox();
+            this.siestaDataSet4 = new Siesta.SiestaDataSet();
+            this.lblRecipe = new System.Windows.Forms.Label();
+            this.lstRecipe1 = new System.Windows.Forms.ListBox();
+            ((System.ComponentModel.ISupportInitialize)(this.siestaDataSet4)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelRecipes
+            // siestaDataSet4
             // 
-            this.labelRecipes.AutoSize = true;
-            this.labelRecipes.Location = new System.Drawing.Point(22, 26);
-            this.labelRecipes.Name = "labelRecipes";
-            this.labelRecipes.Size = new System.Drawing.Size(46, 13);
-            this.labelRecipes.TabIndex = 0;
-            this.labelRecipes.Text = "Recipes";
+            this.siestaDataSet4.DataSetName = "SiestaDataSet";
+            this.siestaDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // listRecipes
+            // lblRecipe
             // 
-            this.listRecipes.FormattingEnabled = true;
-            this.listRecipes.Location = new System.Drawing.Point(25, 57);
-            this.listRecipes.Name = "listRecipes";
-            this.listRecipes.Size = new System.Drawing.Size(120, 95);
-            this.listRecipes.TabIndex = 1;
-            this.listRecipes.SelectedIndexChanged += new System.EventHandler(this.listRecipes_SelectedIndexChanged);
+            this.lblRecipe.Location = new System.Drawing.Point(33, 43);
+            this.lblRecipe.Name = "lblRecipe";
+            this.lblRecipe.Size = new System.Drawing.Size(123, 28);
+            this.lblRecipe.TabIndex = 0;
+            this.lblRecipe.Text = "Recipe";
+            // 
+            // lstRecipe1
+            // 
+            this.lstRecipe1.Location = new System.Drawing.Point(36, 74);
+            this.lstRecipe1.Name = "lstRecipe1";
+            this.lstRecipe1.Size = new System.Drawing.Size(120, 95);
+            this.lstRecipe1.TabIndex = 0;
             // 
             // formMain
             // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.listRecipes);
-            this.Controls.Add(this.labelRecipes);
+            this.ClientSize = new System.Drawing.Size(420, 317);
+            this.Controls.Add(this.lstRecipe1);
+            this.Controls.Add(this.lblRecipe);
             this.Name = "formMain";
+            this.Load += new System.EventHandler(this.formMain_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.siestaDataSet4)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -69,8 +74,13 @@
         private System.Windows.Forms.ListBox lisRecipes;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label asdf;
-        private System.Windows.Forms.Label labelRecipes;
-        private System.Windows.Forms.ListBox listRecipes;
+        private SiestaDataSet siestaDataSet2;
+        private System.Windows.Forms.Label lblRecipe1;
+        private System.Windows.Forms.ListBox lstRecipe;
+        private SiestaDataSet siestaDataSet3;
+        private SiestaDataSet siestaDataSet4;
+        private System.Windows.Forms.Label lblRecipe;
+        private System.Windows.Forms.ListBox lstRecipe1;
     }
 }
 

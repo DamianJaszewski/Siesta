@@ -23,9 +23,13 @@ namespace Siesta
 
             connectionString = ConfigurationManager.ConnectionStrings["Siesta.Properties.Settings.SiestaConnectionString"].ConnectionString;
         }
-        private void listRecipes_SelectedIndexChanged(object sender, EventArgs e)
+        private void formMain_Load(object sender, EventArgs e)
         {
             PopularRecipes();
+        }
+        private void listRecipes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //PopularRecipes();
         }
 
         private void PopularRecipes()
@@ -37,11 +41,11 @@ namespace Siesta
                 DataTable recipeTable = new DataTable();
                 adapter.Fill(recipeTable);
 
-                listRecipes.DisplayMember = "Name";
-                listRecipes.ValueMember = "Id";
-                listRecipes.DataSource = recipeTable;
+                lstRecipe1.DisplayMember = "Name";
+                lstRecipe1.ValueMember = "Id";
+                lstRecipe1.DataSource = recipeTable;
             }
-           
+
         }
     }
 }
