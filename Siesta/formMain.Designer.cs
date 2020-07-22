@@ -68,16 +68,6 @@
 
         #endregion
 
-        private SiestaDataSet siestaDataSet;
-        private SiestaDataSet siestaDataSet1;
-        private System.Windows.Forms.Label lblRecipes;
-        private System.Windows.Forms.ListBox lisRecipes;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Label asdf;
-        private SiestaDataSet siestaDataSet2;
-        private System.Windows.Forms.Label lblRecipe1;
-        private System.Windows.Forms.ListBox lstRecipe;
-        private SiestaDataSet siestaDataSet3;
         private SiestaDataSet siestaDataSet4;
         private System.Windows.Forms.Label lblRecipe;
         private System.Windows.Forms.ListBox lstRecipe1;
