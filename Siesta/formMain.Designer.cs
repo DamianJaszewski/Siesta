@@ -29,15 +29,41 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Button btnAddRecipe;
+            System.Windows.Forms.Button btnUpdateRecipeName;
+            System.Windows.Forms.Button btnAddToRecipe;
             this.siestaDataSet4 = new Siesta.SiestaDataSet();
             this.lblRecipe = new System.Windows.Forms.Label();
             this.lstRecipe = new System.Windows.Forms.ListBox();
             this.lstIngredient = new System.Windows.Forms.ListBox();
             this.lblIngredient = new System.Windows.Forms.Label();
             this.txtRecipeName = new System.Windows.Forms.TextBox();
+            this.lstAllIngredients = new System.Windows.Forms.ListBox();
+            this.lblAllIngredients = new System.Windows.Forms.Label();
             btnAddRecipe = new System.Windows.Forms.Button();
+            btnUpdateRecipeName = new System.Windows.Forms.Button();
+            btnAddToRecipe = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.siestaDataSet4)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnAddRecipe
+            // 
+            btnAddRecipe.Location = new System.Drawing.Point(36, 44);
+            btnAddRecipe.Name = "btnAddRecipe";
+            btnAddRecipe.Size = new System.Drawing.Size(75, 23);
+            btnAddRecipe.TabIndex = 3;
+            btnAddRecipe.Text = "Add Recipe";
+            btnAddRecipe.UseVisualStyleBackColor = true;
+            btnAddRecipe.Click += new System.EventHandler(this.btnAddRecipe_Click);
+            // 
+            // btnUpdateRecipeName
+            // 
+            btnUpdateRecipeName.Location = new System.Drawing.Point(117, 44);
+            btnUpdateRecipeName.Name = "btnUpdateRecipeName";
+            btnUpdateRecipeName.Size = new System.Drawing.Size(102, 23);
+            btnUpdateRecipeName.TabIndex = 5;
+            btnUpdateRecipeName.Text = "Update Name";
+            btnUpdateRecipeName.UseVisualStyleBackColor = true;
+            btnUpdateRecipeName.Click += new System.EventHandler(this.btnUpdateRecipeName_Click);
             // 
             // siestaDataSet4
             // 
@@ -78,26 +104,46 @@
             this.lblIngredient.Text = "Ingredients";
             this.lblIngredient.Click += new System.EventHandler(this.label1_Click);
             // 
-            // btnAddRecipe
-            // 
-            btnAddRecipe.Location = new System.Drawing.Point(36, 44);
-            btnAddRecipe.Name = "btnAddRecipe";
-            btnAddRecipe.Size = new System.Drawing.Size(75, 23);
-            btnAddRecipe.TabIndex = 3;
-            btnAddRecipe.Text = "Add Recipe";
-            btnAddRecipe.UseVisualStyleBackColor = true;
-            btnAddRecipe.Click += new System.EventHandler(this.btnAddRecipe_Click);
-            // 
             // txtRecipeName
             // 
             this.txtRecipeName.Location = new System.Drawing.Point(36, 18);
             this.txtRecipeName.Name = "txtRecipeName";
-            this.txtRecipeName.Size = new System.Drawing.Size(100, 20);
+            this.txtRecipeName.Size = new System.Drawing.Size(183, 20);
             this.txtRecipeName.TabIndex = 4;
+            // 
+            // lstAllIngredients
+            // 
+            this.lstAllIngredients.Location = new System.Drawing.Point(291, 101);
+            this.lstAllIngredients.Name = "lstAllIngredients";
+            this.lstAllIngredients.Size = new System.Drawing.Size(120, 95);
+            this.lstAllIngredients.TabIndex = 6;
+            this.lstAllIngredients.SelectedIndexChanged += new System.EventHandler(this.lstAllIngredients_SelectedIndexChanged);
+            // 
+            // lblAllIngredients
+            // 
+            this.lblAllIngredients.Location = new System.Drawing.Point(288, 83);
+            this.lblAllIngredients.Name = "lblAllIngredients";
+            this.lblAllIngredients.Size = new System.Drawing.Size(123, 15);
+            this.lblAllIngredients.TabIndex = 7;
+            this.lblAllIngredients.Text = "All Ingredients";
+            // 
+            // btnAddToRecipe
+            // 
+            btnAddToRecipe.Location = new System.Drawing.Point(225, 44);
+            btnAddToRecipe.Name = "btnAddToRecipe";
+            btnAddToRecipe.Size = new System.Drawing.Size(119, 23);
+            btnAddToRecipe.TabIndex = 8;
+            btnAddToRecipe.Text = "Add To Recipe";
+            btnAddToRecipe.UseVisualStyleBackColor = true;
+            btnAddToRecipe.Click += new System.EventHandler(this.btnAddToRecipe_Click);
             // 
             // formMain
             // 
             this.ClientSize = new System.Drawing.Size(525, 396);
+            this.Controls.Add(btnAddToRecipe);
+            this.Controls.Add(this.lstAllIngredients);
+            this.Controls.Add(this.lblAllIngredients);
+            this.Controls.Add(btnUpdateRecipeName);
             this.Controls.Add(this.txtRecipeName);
             this.Controls.Add(btnAddRecipe);
             this.Controls.Add(this.lstIngredient);
@@ -120,6 +166,8 @@
         private System.Windows.Forms.ListBox lstIngredient;
         private System.Windows.Forms.Label lblIngredient;
         private System.Windows.Forms.TextBox txtRecipeName;
+        private System.Windows.Forms.ListBox lstAllIngredients;
+        private System.Windows.Forms.Label lblAllIngredients;
     }
 }
 
