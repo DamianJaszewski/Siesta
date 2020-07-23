@@ -113,10 +113,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Siesta.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Siesta_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Siesta.mdf</DependentUpon>
     </Content>
   </ItemGroup>

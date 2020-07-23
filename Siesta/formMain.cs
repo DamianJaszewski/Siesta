@@ -85,5 +85,23 @@ namespace Siesta
         {
 
         }
+
+        private void btnAddRecipe_Click(object sender, EventArgs e)
+        {
+            string query = "INSERT INTO Recipe VALUES (@RecipeName, 80, 'blah blah')";
+
+            using (connection = new SqlConnection(connectionString))
+            using (SqlCommand command = new SqlCommand(query, connection))
+            
+
+            {
+                connection.Open();
+                command.Parameters.AddWithValue("@RecipeName", txtRecipeName.Text);
+
+                command.ExecuteNonQuery();
+            }
+
+            PopulateRecipes();
+        }
     }
 }
