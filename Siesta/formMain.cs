@@ -27,6 +27,7 @@ namespace Siesta
         {
             PopulateRecipes();
             PopulateAllIngredients();
+            PopulateInstruction(); 
         }
 
         private void PopulateRecipes()
@@ -41,6 +42,7 @@ namespace Siesta
                 lstRecipe.DisplayMember = "Name";
                 lstRecipe.ValueMember = "Id";
                 lstRecipe.DataSource = recipeTable;
+
             }
         }
         private void PopulateAllIngredients()
@@ -79,6 +81,18 @@ namespace Siesta
             }
 
         }
+        
+        private void PopulateInstruction()
+        {
+            using (connection = new SqlConnection(connectionString))
+            using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT Instruction FROM Recipe WHERE RecipeId = @RecipeId", connection))
+
+            {
+                
+            }
+        }
+        
+
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -153,6 +167,27 @@ namespace Siesta
                 command.ExecuteNonQuery();
             }
             PopulateRecipes();
+        }
+
+        private void lblAddIngredient_Click(object sender, EventArgs e)
+        {
+            string query = "INSERT INTO Ingredient VALUES (@IngredientName)";
+
+            using (connection = new SqlConnection(connectionString))
+            using (SqlCommand command = new SqlCommand(query, connection))
+
+            {
+                connection.Open();
+                command.Parameters.AddWithValue("@IngredientName", txtRecipeName.Text);
+
+                command.ExecuteNonQuery();
+            }
+            PopulateAllIngredients();
+        }
+
+        private void txtInstruction_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
